@@ -34,12 +34,14 @@ cd github-api-interaction
 
 5. You can use the following features in the application:
 
--Profile: Click the "Get Profile" button to fetch and display your GitHub profile information.
--Repositories: Your repositories will be listed in a card format.
--Create Repository: Fill in the repository details and click the "Create Repository" button to create a new repository on your GitHub account.
--Update Repository: Fill in the existing repository name, new repository name, and description. Click the "Update Repository" button to make changes to an existing repository.
--Delete Repository: Enter the name of the repository you want to delete and click the "Delete Repository" button.
-Note: Make sure you have a stable internet connection and that your Personal Access Token has the necessary permissions to perform these operations.
+- Profile: Click the "Get Profile" button to fetch and display your GitHub profile information.
+
+- Repositories: Your repositories will be listed in a card format.
+- Create Repository: Fill in the repository details and click the "Create Repository" button to create a new repository on your GitHub account.
+- Update Repository: Fill in the existing repository name, new repository name, and description. Click the "Update Repository" button to make changes to an existing repository.
+- Delete Repository: Enter the name of the repository you want to delete and click the "Delete Repository" button.
+
+**Note:** _Make sure you have a stable internet connection and that your Personal Access Token has the necessary permissions to perform these operations._
 
 ## Credits
 
