@@ -12,18 +12,38 @@ body {
 }
 
 header {
-  color: #fff;
+  /* color: #fff; */
   text-align: center;
-  padding: 1.6rem 0 0 0;
+  /* padding: 1.6rem 0 0 0; */
+  /* color: white; */
+  display: flex;
+  align-items: center;
+
+  background-color: black;
+  border-radius: 6px;
+  margin: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: white;
 }
 
+header.logo {
+  flex-basis: 20%;
+}
+header.logo img {
+  height: 1rem;
+}
 header .description {
-  flex-grow: 1;
+  flex-basis: 60%;
 }
 header .description h1 {
   color: white;
 }
+
+header.time {
+  flex-basis: 20%;
+}
+
 #profile {
   display: flex;
 }
@@ -55,7 +75,7 @@ h1 {
 section {
   background-color: black;
   border-radius: 6px;
-  margin: 2rem;
+  margin: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: white;
@@ -77,7 +97,7 @@ h1 {
 }
 .repository-cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   column-gap: 0.5rem;
   flex-wrap: wrap;
   row-gap: 0.5rem;
@@ -117,6 +137,9 @@ label {
   display: block;
   margin-bottom: 0.5rem;
 }
+l.display-inline {
+  display: inline;
+}
 
 input[type="text"],
 input[type="checkbox"],
@@ -128,10 +151,7 @@ select {
   border-radius: 4px;
   font-size: 1rem;
 }
-label#repo-private,
-#repo-private {
-  display: inline;
-}
+
 button {
   background-color: #007bff;
   color: #fff;
@@ -150,7 +170,6 @@ select {
   padding: 0.5rem;
 }
 
-/* Stylish Container */
 .container {
   background-color: #fff;
   border-radius: 6px;
@@ -169,10 +188,15 @@ select {
 }
 
 @media screen and (width<= 900px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
   #profile {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
     align-items: center;
   }
   .user-info {
@@ -181,6 +205,6 @@ select {
   .repository-cards {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
   }
 }

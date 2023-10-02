@@ -19,6 +19,7 @@ class GitHubAPI {
       const githubFollowers = userData.followers;
       const githubFollowing = userData.following;
       const publicRepos = userData.public_repos;
+      const gitHubUrl = userData.html_url;
 
       document.getElementById("avatar").src = userData.avatar_url;
       document.getElementById("user-name").textContent = userData.login;
@@ -43,6 +44,7 @@ class GitHubAPI {
       document.getElementById(
         "public-repos"
       ).textContent = `Public Repositories: ${publicRepos}`;
+      document.getElementById("github-profile-link").href = gitHubUrl;
     } catch (error) {
       console.error("Error fetching user profile:", error);
     }
@@ -112,7 +114,7 @@ class GitHubAPI {
       if (response.status === 201) {
         console.log("Repository created:", response.data);
         alert("Repository created successfully.");
-        await this.listRepositories(); // Refresh the repository list
+        await this.listRepositories();
       } else {
         console.error("Error creating repository:", response.status);
       }
@@ -136,7 +138,6 @@ class GitHubAPI {
       if (response.status === 200) {
         console.log("Repository updated:", response.data);
         alert("Repository updated successfully.");
-        // Clear input fields
         document.getElementById("new-repo-name").value = "";
         document.getElementById("new-repo-description").value = "";
         await this.listRepositories();
@@ -175,7 +176,7 @@ class GitHubAPI {
 
 // Fetch user profile and list repositories
 async function main() {
-  const accessToken = "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";
+  const accessToken = "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";
   const githubUsername = "1bi0";
   const githubApi = new GitHubAPI(accessToken, githubUsername);
   await githubApi.getProfile();
@@ -213,6 +214,10 @@ async function main() {
       const repoName = document.getElementById("delete-repo-name").value;
       githubApi.deleteRepository(repoName);
     });
+
+  setInterval(() => {
+    document.getElementById("time").innerHTML = Date();
+  }, 1000);
 }
 
 main();
