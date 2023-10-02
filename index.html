@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repository Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class=""></div>
+      <img src="./logo.png" alt="" />
+      <div class="description"><h1>GitHub Repository Manager</h1></div>
+    </header>
+
+    <section id="profile">
+      <div class="user-display">
+        <h2 id="user-name"></h2>
+        <img id="avatar" src="" alt="User Avatar" />
+      </div>
+
+      <div class="user-info">
+        <h1 id="user-full-name"></h1>
+        <p id="user-bio"></p>
+        <p id="user-location"></p>
+        <p id="user-email"></p>
+        <p id="user-website"></p>
+        <p id="github-join-date"></p>
+        <p id="github-followers"></p>
+        <p id="github-following"></p>
+        <p id="public-repos"></p>
+        <p id="github-contributions"></p>
+        <a id="github-profile-link" href="" target="_blank"
+          >Visit GitHub Profile</a
+        >
+      </div>
+    </section>
+
+    <section id="repositories">
+      <h2>Repositories</h2>
+      <div id="repository-list" class="repository-cards"></div>
+    </section>
+
+    <section id="create-repo">
+      <div class="section-center">
+        <h2>Create a New Repository</h2>
+        <form id="create-repo-form">
+          <label for="repo-name">Repository Name:</label>
+          <input type="text" id="repo-name" required />
+          <label for="repo-description">Description:</label>
+          <input type="text" id="repo-description" />
+          <label for="repo-private">Private:</label>
+          <input type="checkbox" id="repo-private" />
+          <button type="submit">Create Repository</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="update-repo">
+      <div class="section-center">
+        <h2>Update Repository</h2>
+        <form id="update-repo-form">
+          <label for="update-repo-name">Select Repository:</label>
+          <select id="update-repo-name" required></select>
+          <label for="new-repo-name">New Name:</label>
+          <input type="text" id="new-repo-name" required />
+          <label for="new-repo-description">New Description:</label>
+          <input type="text" id="new-repo-description" />
+          <button type="submit">Update Repository</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="delete-repo">
+      <div class="section-center">
+        <h2>Delete Repository</h2>
+        <form id="delete-repo-form">
+          <label for="delete-repo-name">Select Repository:</label>
+          <select id="delete-repo-name" required></select>
+          <button type="submit">Delete Repository</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
