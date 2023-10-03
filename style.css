@@ -50,6 +50,11 @@ header.time {
 .time p {
   font-weight: 400;
 }
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
 #profile {
   display: flex;
 }
@@ -200,6 +205,12 @@ footer {
   header {
     display: flex;
     flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     row-gap: 0.5rem;
   }
   #profile {
