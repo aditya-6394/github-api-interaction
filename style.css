@@ -41,12 +41,15 @@ header .description {
 }
 header .description h1 {
   color: white;
+  font-size: 2.4rem;
 }
 
 header.time {
   flex-basis: 20%;
 }
-
+.time p {
+  font-weight: 400;
+}
 #profile {
   display: flex;
 }

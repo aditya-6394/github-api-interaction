@@ -176,8 +176,8 @@ class GitHubAPI {
 
 // Fetch user profile and list repositories
 async function main() {
-  const accessToken = "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";
   const githubUsername = "1bi0";
+  const accessToken = "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";
   const githubApi = new GitHubAPI(accessToken, githubUsername);
   await githubApi.getProfile();
   await githubApi.listRepositories();
