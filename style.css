@@ -10,15 +10,18 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.layout {
+  background-color: black;
+  border-radius: 6px;
+  margin: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
 header {
-  /* color: #fff; */
   text-align: center;
-  /* padding: 1.6rem 0 0 0; */
-  /* color: white; */
   display: flex;
   align-items: center;
-
   background-color: black;
   border-radius: 6px;
   margin: 1rem;
@@ -72,14 +75,6 @@ h1 {
   font-size: 2rem;
 }
 
-section {
-  background-color: black;
-  border-radius: 6px;
-  margin: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: white;
-}
 .repository-cards :hover {
   position: relative;
   left: 0.3rem;
@@ -152,6 +147,13 @@ select {
   font-size: 1rem;
 }
 
+.wrapper {
+  display: flex;
+}
+#type {
+  flex-basis: 30%;
+}
+
 button {
   background-color: #007bff;
   color: #fff;
@@ -184,6 +186,10 @@ select {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   margin-top: 1rem;
+  text-align: center;
+}
+
+footer {
   text-align: center;
 }
 

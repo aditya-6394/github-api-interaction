@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="layout">
       <div class="logo">
         <img src="./logo.png" alt="" />
       </div>
@@ -19,7 +19,7 @@
       </div>
     </header>
 
-    <section id="profile">
+    <section id="profile" class="layout">
       <div class="user-display">
         <h2 id="user-name"></h2>
         <img id="avatar" src="" alt="User Avatar" />
@@ -42,12 +42,12 @@
       </div>
     </section>
 
-    <section id="repositories">
+    <section id="repositories" class="layout">
       <h2>Repositories</h2>
       <div id="repository-list" class="repository-cards"></div>
     </section>
 
-    <section id="create-repo">
+    <section id="create-repo" class="layout">
       <div class="section-center">
         <h2>Create a New Repository</h2>
         <form id="create-repo-form">
@@ -55,14 +55,16 @@
           <input type="text" id="repo-name" required />
           <label for="repo-description">Description:</label>
           <input type="text" id="repo-description" />
-          <label for="repo-private">Private:</label>
-          <input type="checkbox" id="repo-private" />
+          <div class="wrapper">
+            <label for="repo-private" id="type">Private:</label>
+            <input type="checkbox" id="repo-private" />
+          </div>
           <button type="submit">Create Repository</button>
         </form>
       </div>
     </section>
 
-    <section id="update-repo">
+    <section id="update-repo" class="layout">
       <div class="section-center">
         <h2>Update Repository</h2>
         <form id="update-repo-form">
@@ -77,7 +79,7 @@
       </div>
     </section>
 
-    <section id="delete-repo">
+    <section id="delete-repo" class="layout">
       <div class="section-center">
         <h2>Delete Repository</h2>
         <form id="delete-repo-form">
@@ -87,6 +89,7 @@
         </form>
       </div>
     </section>
+    <footer class="layout">&copy; __infinite__</footer>
 
     <script src="./script.js" type="module"></script>
   </body>
